@@ -1,0 +1,104 @@
+.card-row{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card-row-child {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card-row-child.two-cards {
+    width: 40%;
+    min-width: 300px;
+    margin: 10px 5% 5% 40px;
+}
+
+.card-row-child.three-cards {
+    width: 25%;
+    min-width: 300px;
+    margin: 10px 2.5% 2.5% 40px;
+}
+
+.card-row-child.four-cards {
+    width: 15%;
+    min-width: 300px;
+    margin: 10px 20px 20px 40px;
+}
+
+.card-container {
+    background-color: white;
+    border: solid #222222 2px;
+    padding: 20px;
+    box-shadow: 20px 10px 10px lightgray;
+    width: 100%;
+}
+
+.card-container:hover {
+    background-color: #BBCDE5;
+}
+
+.card-container hr {
+    border-color: #1C5D99;
+}
+
+.image-card-container {
+    border: solid black 2px;
+    padding: 20px;
+    box-shadow: 20px 10px 10px lightgray;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.image-card-container:hover {
+    background-color: #1C5D99;
+    color: white;
+}
+
+.card-image {
+    max-width: 100%;
+    width: auto;
+    max-height: 300px;
+    padding: 0 20px;
+}
+
+.card-body-container {
+    width: 40%;
+    min-width: 300px;
+    flex: 3;
+}
+
+.card-body-container hr {
+    border-color: #1C5D99;
+}
+
+.card-button-container {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.card-button {
+    cursor: pointer;
+    width: 60%;
+    background-color: white;
+    opacity: 50%;
+    border-radius: 0;
+    border-width: 2px;
+    border-color: lightgrey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-weight: bold;
+    font-size: large;
+    color: black;
+}
+.card-button:hover {
+    background-color: blue;
+    color: white;
+}
