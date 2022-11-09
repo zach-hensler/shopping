@@ -3,7 +3,7 @@ run-name: deploy-ui
 on:
   push:
     branches:
-      - main
+      - develop
 jobs:
   deploy:
     runs-on: ubuntu-latest
