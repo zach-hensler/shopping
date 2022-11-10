@@ -5,7 +5,7 @@ import {
     RouterProvider,
 } from "react-router-dom";
 
-import { Home } from './pages';
+import { ItemDetails, Home } from './pages';
 import './css/index.css';
 import reportWebVitals from './reportWebVitals';
 
@@ -17,6 +17,10 @@ const router = createHashRouter([
     {
         path: "cart",
         element: <div>cart</div>,
+    },
+    {
+        path: "item/:itemId/details",
+        element: <ItemDetails />,
     },
 ], { basename: '/' });
 
