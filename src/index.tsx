@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import {
-    createBrowserRouter,
+    createHashRouter,
     RouterProvider,
 } from "react-router-dom";
 
@@ -9,16 +9,16 @@ import { Home } from './pages';
 import './css/index.css';
 import reportWebVitals from './reportWebVitals';
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     {
         path: "/",
         element: <Home />,
     },
     {
-        path: "/cart",
-        element: <div>Cart</div>,
+        path: "cart",
+        element: <div>cart</div>,
     },
-]);
+], { basename: '/' });
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
