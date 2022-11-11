@@ -8,8 +8,8 @@ const mockItemDb:shopItem[] = [
         quantityRemaining: 3,
         avgRating: 0,
         reviews: [
-            { rating: 4, text: "A product of superior quality and unparalleled taste. Truly a marvel of the modern kitchen and something every self respecting chef should have displayed. Would be five stars, but there was no warning that the more burnt it becomes the higher the chance it can be used as a weapon. Would recommend." },
-            { rating: 2, text: "It's okay" },
+            { rating: 5, text: "A product of superior quality and unparalleled taste. Truly a marvel of the modern kitchen and something every self respecting chef should have displayed. Would be five stars, but there was no warning that the more burnt it becomes the higher the chance it can be used as a weapon. Would recommend." },
+            { rating: 5, text: "It's okay" },
         ],
     },
     {
