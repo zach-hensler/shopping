@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { mockGetItems } from '../api/items';
-import { Card, CardRow } from '../components';
+import { ItemPreviewCard } from '../components';
 import { shopItem } from '../types';
 
 export const Home:React.FC = () => {
@@ -16,14 +16,16 @@ export const Home:React.FC = () => {
 
     const renderShopItems = () => {
         return shopItems.map(shopItem => (
-            <Link key={shopItem.id} to={`/item/${shopItem.id}/details`}><Card cardHeader={shopItem.name} cardBody={shopItem.description}/></Link>
+            <Link key={shopItem.id} to={`/item/${shopItem.id}/details`} className="w-1/4">
+                <ItemPreviewCard name={shopItem.name} description={shopItem.description} avgRating={3}/>
+            </Link>
         ));
     };
 
     return (
         <div>
             <h2>Shop</h2>
-            <CardRow Cards={renderShopItems()} />
+            <div className='flex items-stretch flex-wrap'>{renderShopItems()}</div>
         </div>
     );
 };
