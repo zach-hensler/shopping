@@ -1,9 +1,10 @@
 export interface shopItem {
-    id: string
-    name: string
-    description: string
-    quantityRemaining: number
-    reviews: review[]
+    id?: string
+    name?: string
+    description?: string
+    quantityRemaining?: number
+    avgRating?: number
+    reviews?: review[]
 }
 
 interface review {
