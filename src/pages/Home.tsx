@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 import { mockGetItems } from '../api/items';
 import { ItemPreviewCard } from '../components';
@@ -16,9 +15,10 @@ export const Home:React.FC = () => {
 
     const renderShopItems = () => {
         return shopItems.map(shopItem => (
-            <Link key={shopItem.id} to={`/item/${shopItem.id}/details`} className="w-1/4">
-                <ItemPreviewCard name={shopItem.name} description={shopItem.description} avgRating={3}/>
-            </Link>
+            <ItemPreviewCard
+                key={shopItem.id} path={`/item/${shopItem.id}/details`}
+                name={shopItem?.name || ''} description={shopItem?.description || ''} avgRating={shopItem?.avgRating || 0}
+            />
         ));
     };
 

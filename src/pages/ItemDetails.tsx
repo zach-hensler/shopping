@@ -16,9 +16,9 @@ export const ItemDetails: React.FC = () => {
         }
         mockGetItemById(itemId)
             .then(item => setItemDetails(item));
-    });
+    }, []);
 
-    const renderReviews = () => itemDetails?.reviews.map((review, index) => (
+    const renderReviews = () => itemDetails?.reviews?.map((review, index) => (
         <Card
             key={index}
             cardBody={<><p>{review.rating}/5</p><p>{review.text}</p></>}
