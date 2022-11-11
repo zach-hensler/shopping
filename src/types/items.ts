@@ -3,4 +3,10 @@ export interface shopItem {
     name: string
     description: string
     quantityRemaining: number
+    reviews: review[]
+}
+
+interface review {
+    rating: number
+    text: string
 }
