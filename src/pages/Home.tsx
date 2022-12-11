@@ -16,16 +16,20 @@ export const Home:React.FC = () => {
     const renderShopItems = () => {
         return shopItems.map(shopItem => (
             <ItemPreviewCard
-                key={shopItem.id} path={`/item/${shopItem.id}/details`}
-                name={shopItem?.name || ''} description={shopItem?.description || ''} avgRating={shopItem?.avgRating || 0}
+                key={shopItem.id}
+                path={`/item/${shopItem.id}/details`}
+                name={shopItem?.name || ''}
+                description={shopItem?.description || ''}
+                avgRating={shopItem?.avgRating || 0}
+                thumbnailUrl={shopItem?.thumbnailUrl || ''}
+                thumbnailAltText={shopItem?.thumbnailAltText || shopItem?.name || 'Preview Thumbnail'}
             />
         ));
     };
 
     return (
         <div>
-            <h2>Shop</h2>
-            <div className='flex items-stretch flex-wrap'>{renderShopItems()}</div>
+            <div className='flex flex-col items-stretch flex-wrap justify-center'>{renderShopItems()}</div>
         </div>
     );
 };

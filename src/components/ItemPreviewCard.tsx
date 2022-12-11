@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 interface ItemPreviewCardProps {
+    thumbnailUrl: string
+    thumbnailAltText: string
     name: string
     description: string
     path: string
@@ -9,18 +11,26 @@ interface ItemPreviewCardProps {
 }
 
 export const ItemPreviewCard:React.FC<ItemPreviewCardProps> = ({
+    thumbnailUrl,
+    thumbnailAltText,
     name,
     description,
     path,
     avgRating,
 }) => {
-    const containerBorderStyles = 'border-2 border-green-700 hover:border-4 hover:border-green-900';
-    const containerSizeStyles = 'p-2 m-5 w-1/5 rounded-md';
+    const containerBorderStyles = 'border border-yellow-700 hover:border-2 hover:border-yellow-500 shadow-md hover:shadow-md';
+    const containerSizeStyles = 'p-2 m-5 w-full rounded-md';
+    const containerFlexStyles = 'flex flex-row';
+
     return (
-        <Link to={path} className={`${containerBorderStyles} ${containerSizeStyles} shadow-md hover:shadow-2xl`}>
-            <h3>{name} - {avgRating}/5</h3>
-            <hr />
-            <p>{description}</p>
+        <Link to={path} className={`${containerBorderStyles} ${containerSizeStyles} ${containerFlexStyles}`}>
+            <div className='w-1/4 h-36'>
+                <img src={thumbnailUrl} alt={thumbnailAltText} className='m-auto w-auto max-w-full h-auto max-h-full' />
+            </div>
+            <div>
+                <h2 className='font-bold text-lg pb-1.5'>{name} - {avgRating}/5</h2>
+                <p>{description}</p>
+            </div>
         </Link>
     );
 };
