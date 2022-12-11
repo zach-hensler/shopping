@@ -5,24 +5,11 @@ import {
     RouterProvider,
 } from "react-router-dom";
 
-import { ItemDetails, Home } from './pages';
+import { routes } from './constants/routes';
 import './css/index.css';
 import reportWebVitals from './reportWebVitals';
 
-const router = createHashRouter([
-    {
-        path: "/",
-        element: <Home />,
-    },
-    {
-        path: "cart",
-        element: <div>cart</div>,
-    },
-    {
-        path: "item/:itemId/details",
-        element: <ItemDetails />,
-    },
-], { basename: '/' });
+const router = createHashRouter(routes, { basename: '/' });
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement,
